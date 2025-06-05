@@ -1,0 +1,6 @@
+faiss-cpu
+sentence-transformers
+python-dotenv
+bm25s[full]
+PyStemmer
+pydantic

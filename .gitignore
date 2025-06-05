@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+# .env
+
+# Distribution / packaging
+.Python
+*.manifest
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Model Files and Caches
+model/*
+*/model_cache/
+.cache/
+*.pt
+*.bin
+*.safetensors
+# If you want to include specific model files, add them with !
+# !model/specific_file_to_include.xyz
+
+# Logs
+logs/
+*.log
+
+# Local data or embeddings
+data/embeddings/
+data/processed/
+
+# OS specific
+.DS_Store
+Thumbs.db
