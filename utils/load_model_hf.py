@@ -1,3 +1,5 @@
+# Модуль для локальной загрузки модели Hugging Face с использованием SentenceTransformer
+# При следующих запусках модель подгружается уже из EMBEDDINGS_MODEL_DIR
 import os
 from sentence_transformers import SentenceTransformer
 from configs.config import settings
