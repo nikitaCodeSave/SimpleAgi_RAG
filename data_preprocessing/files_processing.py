@@ -4,7 +4,6 @@
 
 import os
 import asyncio
-from concurrent.futures import ThreadPoolExecutor
 from utils.splitters import MarkdownSplitter, TextSplitter
 from configs.logger_config import setup_logger
 from configs.config import settings
@@ -26,10 +25,9 @@ async def read_and_process_file(file_path: str, splitter_instance) -> list[str]:
         with open(file_path, 'r', encoding='utf-8') as f:
             return f.read()
     
-    loop = asyncio.get_event_loop()
-    with ThreadPoolExecutor() as executor:
-        text = await loop.run_in_executor(executor, _read_file)
-        chunks = await loop.run_in_executor(executor, splitter_instance.split_text, text)
+    # Используем asyncio.to_thread для чистого asyncio подхода
+    text = await asyncio.to_thread(_read_file)
+    chunks = await asyncio.to_thread(splitter_instance.split_text, text)
     
     return chunks
 
