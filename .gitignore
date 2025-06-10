@@ -26,6 +26,8 @@ venv/
 env/
 ENV/
 # .env
+create_all_repo_md.py
+project.md
 
 # Distribution / packaging
 .Python
